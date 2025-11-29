@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: chat-service
+  config:
+    import: "optional:configserver:http://localhost:8888"
+
+  # FORCE OVERRIDE LOCALLY
+  mongodb:
+    uri: mongodb://admin:password@localhost:27017/gigtasker_chat?authSource=admin
