@@ -1,7 +1,7 @@
 package com.gigtasker.chatservice.service;
 
-import com.gigtasker.chatservice.entity.ChatMessage;
-import com.gigtasker.chatservice.entity.ChatRoom;
+import com.gigtasker.chatservice.document.ChatMessage;
+import com.gigtasker.chatservice.document.ChatRoom;
 import com.gigtasker.chatservice.repository.ChatMessageRepository;
 import com.gigtasker.chatservice.repository.ChatRoomRepository;
 import org.springframework.stereotype.Service;

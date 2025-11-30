@@ -1,6 +1,6 @@
 package com.gigtasker.chatservice.repository;
 
-import com.gigtasker.chatservice.entity.ChatMessage;
+import com.gigtasker.chatservice.document.ChatMessage;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.List;
