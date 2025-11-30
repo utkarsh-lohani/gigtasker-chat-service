@@ -1,8 +1,8 @@
 package com.gigtasker.chatservice.controller;
 
-import com.gigtasker.chatservice.dto.ChatNotification;
 import com.gigtasker.chatservice.document.ChatMessage;
 import com.gigtasker.chatservice.document.ChatRoom;
+import com.gigtasker.chatservice.dto.ChatNotification;
 import com.gigtasker.chatservice.service.ChatService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
