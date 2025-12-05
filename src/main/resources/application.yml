@@ -1,9 +1,30 @@
 spring:
   application:
     name: chat-service
-  config:
-    import: "optional:configserver:http://localhost:8888"
-
   # FORCE OVERRIDE LOCALLY
   mongodb:
     uri: mongodb://admin:password@localhost:27017/gigtasker_chat?authSource=admin
+
+---
+# ==========================================
+# PROFILE: DEFAULT (Local/IntelliJ)
+# ==========================================
+# Active when no specific profile is set (e.g. running in IDE)
+spring:
+  config:
+    activate:
+      on-profile: default
+    # Localhost fallback
+    import: "optional:configserver:http://localhost:8888"
+
+---
+# ==========================================
+# PROFILE: DOCKER (Production/Container)
+# ==========================================
+# Active when SPRING_PROFILES_ACTIVE=docker
+spring:
+  config:
+    activate:
+      on-profile: docker
+    # Docker DNS Name
+    import: "optional:configserver:http://config-server:8888"
